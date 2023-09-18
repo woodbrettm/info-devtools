@@ -1,0 +1,16 @@
+{
+  "name": "info-devtools",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": [
+    "--name", "woodbrettm.info-devtools.dev"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
