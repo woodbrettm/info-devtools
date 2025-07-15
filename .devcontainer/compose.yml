@@ -1,0 +1,10 @@
+services:
+  node:
+    build:
+      context: .
+      dockerfile: ./node.Dockerfile
+    image: localhost/info-devtools_devcontainer:latest
+    userns_mode: "keep-id"
+    volumes:
+      - ../:/home/node/info-devtools
+    tty: true

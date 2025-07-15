@@ -1,16 +1,22 @@
 {
-  "name": "info-devtools",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "runArgs": [
-    "--name", "woodbrettm.info-devtools.dev"
-  ],
+  "$schema": "https://raw.githubusercontent.com/devcontainers/spec/main/schemas/devContainer.schema.json",
+  "name": "Info DevTools",
+  "dockerComposeFile": "./compose.yml",
+  "service": "node",
+  "workspaceFolder": "/home/node/info-devtools",
   "customizations": {
     "vscode": {
       "extensions": [
-        "esbenp.prettier-vscode"
-      ]
+        "esbenp.prettier-vscode",
+        "bierner.markdown-preview-github-styles"
+      ],
+      "settings": {
+        "[markdown]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true,
+          "editor.wordWrap": "off"
+        }
+      }
     }
   }
 }
